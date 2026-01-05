@@ -1,59 +1,172 @@
-# AngularApp
+# 📋 Task Management App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
+Um aplicativo moderno de gerenciamento de tarefas construído com Angular 21, permitindo que usuários organizem e acompanhem suas tarefas de forma intuitiva.
 
-## Development server
+## 📖 Sobre o Projeto
 
-To start a local development server, run:
+Task Management App é uma aplicação web desenvolvida com Angular que oferece uma interface simples e eficiente para gerenciar tarefas pessoais. O sistema permite que múltiplos usuários organizem suas tarefas, definam prazos e acompanhem o progresso de seus afazeres.
+
+### 🎯 Funcionalidades
+
+- **👥 Gestão de Usuários**: Sistema de seleção de usuários com avatares personalizados
+- **✅ Criação de Tarefas**: Adicione novas tarefas com título, descrição e data de vencimento
+- **📝 Visualização de Tarefas**: Visualize todas as tarefas do usuário selecionado
+- **🗑️ Exclusão de Tarefas**: Complete e remova tarefas concluídas
+- **💾 Persistência Local**: As tarefas são salvas automaticamente no localStorage do navegador
+- **🎨 Interface Moderna**: Design limpo e responsivo com componentes reutilizáveis
+
+## 🚀 Tecnologias Utilizadas
+
+- **Angular 21** - Framework front-end
+- **TypeScript** - Linguagem de programação
+- **RxJS** - Programação reativa
+- **Angular Forms** - Gerenciamento de formulários
+- **LocalStorage API** - Persistência de dados local
+
+## 📋 Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado:
+
+- **Node.js** (versão 18 ou superior)
+- **npm** (versão 9 ou superior) ou **yarn**
+
+## 🔧 Instalação
+
+1. Clone o repositório:
+```bash
+git clone <url-do-repositorio>
+cd task-management-app
+```
+
+2. Instale as dependências:
+```bash
+npm install
+```
+
+## 💻 Executando o Projeto
+
+### Servidor de Desenvolvimento
+
+Para iniciar o servidor de desenvolvimento, execute:
+
+```bash
+npm start
+```
+
+ou
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+A aplicação estará disponível em `http://localhost:4200/`. A aplicação recarregará automaticamente sempre que você modificar os arquivos de origem.
 
-## Code scaffolding
+### Build para Produção
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Para gerar uma build de produção otimizada, execute:
 
 ```bash
-ng generate component component-name
+npm run build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Os arquivos compilados serão armazenados no diretório `dist/`.
+
+### Modo Watch
+
+Para compilar o projeto em modo watch durante o desenvolvimento:
+
+```bash
+npm run watch
+```
+
+## 🧪 Testes
+
+Para executar os testes unitários:
+
+```bash
+npm test
+```
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── app/
+│   ├── header/              # Componente de cabeçalho
+│   ├── user/                # Componente de usuário
+│   ├── tasks/               # Módulo de tarefas
+│   │   ├── task/           # Componente de tarefa individual
+│   │   ├── new-task/       # Componente de criação de tarefa
+│   │   └── tasks.service.ts # Serviço de gerenciamento de tarefas
+│   ├── shared/              # Componentes compartilhados
+│   │   └── card/           # Componente de card reutilizável
+│   ├── dummy-users.ts      # Dados mockados de usuários
+│   └── app.ts              # Componente raiz
+├── index.html
+└── main.ts
+```
+
+## 🎨 Componentes Principais
+
+### TasksComponent
+Componente principal que gerencia a lista de tarefas do usuário selecionado.
+
+### Task
+Componente que exibe uma tarefa individual com opção de exclusão.
+
+### NewTaskComponent
+Componente de formulário para criação de novas tarefas.
+
+### UserComponent
+Componente que exibe informações do usuário e permite seleção.
+
+### TasksService
+Serviço que gerencia a lógica de negócio das tarefas, incluindo persistência no localStorage.
+
+## 💾 Armazenamento de Dados
+
+O aplicativo utiliza o **localStorage** do navegador para persistir as tarefas. Os dados são salvos automaticamente sempre que uma tarefa é adicionada ou removida.
+
+⚠️ **Nota**: Os dados são armazenados localmente no navegador e não são sincronizados entre dispositivos.
+
+## 🔄 Fluxo de Dados
+
+1. Usuário seleciona um usuário da lista
+2. As tarefas do usuário selecionado são exibidas
+3. Usuário pode criar novas tarefas ou excluir tarefas existentes
+4. Alterações são salvas automaticamente no localStorage
+
+## 🛠️ Desenvolvimento
+
+### Gerando Novos Componentes
+
+Para gerar um novo componente usando Angular CLI:
+
+```bash
+ng generate component nome-do-componente
+```
+
+Para ver uma lista completa de schematics disponíveis:
 
 ```bash
 ng generate --help
 ```
 
-## Building
+## 📚 Recursos Adicionais
 
-To build the project run:
+- [Documentação do Angular](https://angular.dev)
+- [Angular CLI Overview](https://angular.dev/tools/cli)
+- [Guia de TypeScript](https://www.typescriptlang.org/docs/)
 
-```bash
-ng build
-```
+## 📝 Licença
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Este projeto é privado.
 
-## Running unit tests
+## 👤 Autor
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Desenvolvido como projeto de aprendizado e demonstração das funcionalidades do Angular.
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Versão**: 0.0.0  
+**Última atualização**: 2025

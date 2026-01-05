@@ -1,0 +1,20 @@
+  @if(newTaskVisible) {
+    <app-new-task (close)="cancelAddTask()" [userId]="selectedUserId"/>
+  }
+
+<section id="tasks">
+  <header>
+    <h2>{{name}}'s tasks</h2>
+  </header>
+  <menu>
+    <button (click)="startAddTask()">Add task</button>
+  </menu>
+
+  <ul>
+    @for(task of selectedUserTasks; track task.id) {
+    <li>
+      <app-task [task]="task"/>
+    </li>
+    }
+  </ul>
+</section>
