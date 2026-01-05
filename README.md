@@ -158,13 +158,9 @@ ng generate --help
 - [Angular CLI Overview](https://angular.dev/tools/cli)
 - [Guia de TypeScript](https://www.typescriptlang.org/docs/)
 
-## 📝 Licença
-
-Este projeto é privado.
-
 ## 👤 Autor
 
-Desenvolvido como projeto de aprendizado e demonstração das funcionalidades do Angular.
+Desenvolvido como projeto de aprendizado e demonstração das funcionalidades do Angular, por **Otavio Xavier**
 
 ---
 
